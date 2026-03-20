@@ -5,8 +5,12 @@ const { authRoutes } = require("./routes/authRoutes");
 const { resourceRoutes } = require("./routes/resourceRoutes");
 
 const app = express();
+app.use(cors({                       // <-- add this here
+    origin: "https://campus-resource-hub-five.vercel.app",
+    credentials: true
+}));
 
-app.use(cors({ origin: true }));
+
 app.use(express.json({ limit: "1mb" }));
 
 app.get("/health", (req, res) => res.json({ ok: true }));
