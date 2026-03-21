@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");   // ✅ ADD THIS
 require("dotenv").config();   
+const path = require("path");
 
 const { authRoutes } = require("./routes/authRoutes");
 const { resourceRoutes } = require("./routes/resourceRoutes");
@@ -11,10 +12,11 @@ app.use(cors({                       // <-- add this here
     origin: "https://campus-resource-hub-five.vercel.app",
     credentials: true
 }));
-
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use(express.json({ limit: "1mb" }));
 
+app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 // ✅ CONNECT DATABASE (MOST IMPORTANT)
 mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("DB Connected"))
