@@ -75,6 +75,9 @@ async function downloadResource(req, res) {
   const fullPath = resolveUploadPath(resource.filePath);
   if (!fs.existsSync(fullPath)) return res.status(404).json({ error: "File missing on server" });
 
+  // Set proper headers for download
+  res.setHeader("Content-Disposition", `attachment; filename="${resource.originalName}"`);
+  res.setHeader("Content-Type", resource.mimeType);
   res.download(fullPath, resource.originalName);
 }
 
@@ -85,7 +88,9 @@ async function viewResource(req, res) {
   const fullPath = resolveUploadPath(resource.filePath);
   if (!fs.existsSync(fullPath)) return res.status(404).json({ error: "File missing on server" });
 
-  res.setHeader("content-type", resource.mimeType);
+  // Set proper headers for viewing
+  res.setHeader("Content-Type", resource.mimeType);
+  res.setHeader("Content-Disposition", `inline; filename="${resource.originalName}"`);
   return fs.createReadStream(fullPath).pipe(res);
 }
 
@@ -128,4 +133,3 @@ module.exports = {
   viewResource,
   voteResource,
 };
-
