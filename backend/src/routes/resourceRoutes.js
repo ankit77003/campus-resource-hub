@@ -21,7 +21,8 @@ const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, ensureUploadDir()),
   filename: (req, file, cb) => {
     const safeBase = `${Date.now()}-${Math.random().toString(16).slice(2)}`;
-    cb(null, safeBase);
+    const ext = path.extname(file.originalname);
+    cb(null, safeBase + ext);
   },
 });
 
@@ -42,4 +43,3 @@ router.post("/", requireAuth, upload.single("file"), uploadResource);
 router.post("/:id/vote", requireAuth, voteResource);
 
 module.exports = { resourceRoutes: router };
-
