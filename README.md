@@ -3,6 +3,7 @@
 A full-stack platform for students to upload, share, and access academic resources such as notes, previous-year papers (PYQs), and assignments.
 
 Designed and deployed as a production-ready application with separate frontend and backend services.
+> Backend may take a few seconds to respond due to cold start (free tier hosting).
 
 ## 🎯 Why This Project?
 
