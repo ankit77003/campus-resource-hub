@@ -63,6 +63,7 @@ Designed and deployed as a production-ready application with separate frontend a
 
 
 ### Uploads
+
 <img width="1263" height="622" alt="Screenshot 2026-03-27 at 7 29 17 PM" src="https://github.com/user-attachments/assets/f732efbe-635c-4e51-a418-ae993470e5ca" />
 
 
@@ -82,7 +83,7 @@ Designed and deployed as a production-ready application with separate frontend a
 
 ## 📡 API Endpoints
 
-Base URL: `http://localhost:4001](https://campus-resource-hub-7lut.onrender.com`
+Base URL: `https://campus-resource-hub-7lut.onrender.com`
 
 - `POST /api/auth/signup` body: `{ email, password }`
 - `POST /api/auth/login` body: `{ email, password }`
