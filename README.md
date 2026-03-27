@@ -59,11 +59,12 @@ Designed to demonstrate file handling, REST API design, and scalable backend arc
 ### Dashboard
 
 <img width="1267" height="426" alt="Screenshot 2026-03-27 at 7 28 54 PM" src="https://github.com/user-attac<img width="1263" height="622" alt="Screenshot 2026-03-27 at 7 29 17 PM" src="https://github.com/user-attachments/assets/50e84e3b-6a85-45b3-ad65-15641be3ac5f" />
-hments/assets/284bf62e-e825-4625-9c8c-e9fe4d3036ee" />
+
 
 ### Uploads
+<img width="1263" height="622" alt="Screenshot 2026-03-27 at 7 29 17 PM" src="https://github.com/user-attachments/assets/f732efbe-635c-4e51-a418-ae993470e5ca" />
 
-![Uploading Screenshot 2026-03-27 at 7.29.17 PM.png…]()
+
 
 ### Files
 
