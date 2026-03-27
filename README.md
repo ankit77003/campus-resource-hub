@@ -1,25 +1,44 @@
-# Campus Resource Hub
+# 🚀 Campus Resource Hub
 
-Platform for students to upload and access notes, previous-year papers (PYQ), and assignments.
+A full-stack platform for students to upload, share, and access academic resources such as notes, previous-year papers (PYQs), and assignments.
 
-## Tech
+Designed to demonstrate file handling, REST API design, and scalable backend architecture using the MVC pattern.
 
-- Frontend: React (minimal UI)
-- Backend: Node.js + Express (MVC)
+# 🎯 Why This Project?
+
+- Implements real-world file upload and management using Multer
+- Demonstrates MVC architecture in backend design
+- Supports search, filtering, and voting features
+- Handles authentication and protected routes using JWT
+
+## 🔗 Live Demo
+
+- 🌐 Frontend: https://campus-resource-hub-five.vercel.app/login
+
+- ⚙️ Backend API: https://campus-resource-hub-7lut.onrender.com
+
+
+## 🛠️ Tech Stack
+
+- Frontend: React (Vite)
+- Backend: Node.js, Express.js (MVC Architecture)
 - Database: MongoDB (Mongoose)
-- Auth: JWT
-- Uploads: Multer (stored locally in `backend/uploads/`)
+- Authentication: JWT
+- File Uploads: Multer
+  
 
-## Features
+## ✨ Features
 
-- **Authentication**: Signup/Login (JWT)
-- **Upload resource**: title, subject, semester, type + file upload
-- **Browse + filters**: subject/semester/type
-- **Search**: by title or subject
-- **View/Download**: open in browser or download
-- **Rating**: upvote/downvote per resource
+- 🔐 User authentication (Signup/Login with JWT)
+- 📤 Upload resources (notes, PYQs, assignments)
+- 🔍 Search resources by title or subject
+- 🎯 Filter by subject, semester, and type
+- 📥 View and download uploaded files
+- 👍 Voting system (upvote/downvote)
+- 📦 Structured backend using MVC pattern
+  
 
-## Folder structure
+## 📁 Project Structure
 
 - `backend/`
   - `src/controllers/`
@@ -27,41 +46,30 @@ Platform for students to upload and access notes, previous-year papers (PYQ), an
   - `src/routes/`
   - `src/middleware/`
   - `uploads/`
+    
 - `frontend/`
   - `src/pages/` (`Login`, `Upload`, `Browse`)
-  - `src/lib/` (api + auth helpers)
+  - `src/lib/`
+ 
+## Screenshots
+### Login Page
 
-## Setup
+<img width="1216" height="559" alt="Screenshot 2026-03-27 at 7 28 31 PM" src="https://github.com/user-attachments/assets/083c26ac-bbef-4352-8c1d-d217fe716862" />
 
-### 1) MongoDB
+### Dashboard
 
-Run MongoDB locally (example):
+<img width="1267" height="426" alt="Screenshot 2026-03-27 at 7 28 54 PM" src="https://github.com/user-attac<img width="1263" height="622" alt="Screenshot 2026-03-27 at 7 29 17 PM" src="https://github.com/user-attachments/assets/50e84e3b-6a85-45b3-ad65-15641be3ac5f" />
+hments/assets/284bf62e-e825-4625-9c8c-e9fe4d3036ee" />
 
-- `mongodb://127.0.0.1:27017/campus_resource_hub`
+### Uploads
 
-### 2) Backend
+![Uploading Screenshot 2026-03-27 at 7.29.17 PM.png…]()
 
-```bash
-cd CampusResourceHub/backend
-cp .env.example .env
-npm install
-npm run dev
-```
+### Files
 
-Backend runs on `http://localhost:4001`.
+<img width="1215" height="663" alt="Screenshot 2026-03-27 at 7 29 06 PM" src="https://github.com/user-attachments/assets/7761cb82-889b-4c43-8fad-209e755094cc" />
 
-### 3) Frontend
-
-```bash
-cd CampusResourceHub/frontend
-cp .env.example .env
-npm install
-npm run dev
-```
-
-Frontend runs on `http://localhost:5173`.
-
-## API overview
+    ## API overview
 
 Base URL: `http://localhost:4001`
 
@@ -75,12 +83,36 @@ Base URL: `http://localhost:4001`
 - `GET /api/resources/:id/download`
 - `POST /api/resources` (auth, multipart form-data with `file`)
 - `POST /api/resources/:id/vote` (auth) body: `{ direction: "up" | "down" }`
+    
 
-## Development (step-by-step)
+## ⚙️ Run Locally
 
-You asked for step-by-step generation:
+### Backend
 
-1. Folder structure ✅
-2. Backend (Express + MongoDB + JWT + Multer) ✅
-3. Frontend (React pages: Login, Upload, Browse) ✅
+```bash
+cd backend
+npm install
+cp .env.example .env
+npm run dev
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+cp .env.example .env
+npm run dev
+```
+
+## 🔐 Environment Variables
+
+Backend:
+
+- MONGO_URI
+- JWT_SECRET
+
+Frontend:
+
+- VITE_API_BASE
 
