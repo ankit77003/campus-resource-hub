@@ -2,9 +2,9 @@
 
 A full-stack platform for students to upload, share, and access academic resources such as notes, previous-year papers (PYQs), and assignments.
 
-Designed to demonstrate file handling, REST API design, and scalable backend architecture using the MVC pattern.
+Designed and deployed as a production-ready application with separate frontend and backend services.
 
-# 🎯 Why This Project?
+## 🎯 Why This Project?
 
 - Implements real-world file upload and management using Multer
 - Demonstrates MVC architecture in backend design
@@ -20,11 +20,11 @@ Designed to demonstrate file handling, REST API design, and scalable backend arc
 
 ## 🛠️ Tech Stack
 
-- Frontend: React (Vite)
-- Backend: Node.js, Express.js (MVC Architecture)
-- Database: MongoDB (Mongoose)
-- Authentication: JWT
-- File Uploads: Multer
+- **Frontend:** React (Vite)
+- **Backend:** Node.js, Express.js (MVC Architecture)
+- **Database:** MongoDB (Mongoose)
+- **Authentication:** JWT
+- **File Uploads:** Multer
   
 
 ## ✨ Features
@@ -52,6 +52,7 @@ Designed to demonstrate file handling, REST API design, and scalable backend arc
   - `src/lib/`
  
 ## Screenshots
+
 ### Login Page
 
 <img width="1216" height="559" alt="Screenshot 2026-03-27 at 7 28 31 PM" src="https://github.com/user-attachments/assets/083c26ac-bbef-4352-8c1d-d217fe716862" />
@@ -70,9 +71,18 @@ Designed to demonstrate file handling, REST API design, and scalable backend arc
 
 <img width="1215" height="663" alt="Screenshot 2026-03-27 at 7 29 06 PM" src="https://github.com/user-attachments/assets/7761cb82-889b-4c43-8fad-209e755094cc" />
 
-    ## API overview
 
-Base URL: `http://localhost:4001`
+## 🚀 Key Learnings
+
+- Implemented secure file upload handling using Multer
+- Designed scalable backend using MVC architecture
+- Solved real-world deployment challenges (CORS, environment variables)
+- Built efficient filtering and search functionality
+  
+
+## 📡 API Endpoints
+
+Base URL: `http://localhost:4001](https://campus-resource-hub-7lut.onrender.com`
 
 - `POST /api/auth/signup` body: `{ email, password }`
 - `POST /api/auth/login` body: `{ email, password }`
